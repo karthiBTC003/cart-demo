@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input
+          type="number"
+          onchange="updateMinMax()"
+          min="1"
+          placeholder="Enter x min-value"
+          id="input-a"
+          class="min1"
+        />
+        <input
+          type="number"
+          onchange="updateMinMax()"
+          min="1"
+          placeholder="Enter y-max-value"
+          id="input-b"
+          class="max1"
+        />
+      </div>
+    
+    <button onclick="createNewDiv()">Click me</button>
+    <button onclick="clearDivs()">Clear All</button>
+
+<div id="container"></div>
+<div id="total"></div>
+
+
+
+<script>var inputs = [];
+
+    function createNewDiv() {
+      // Create a new div element
+      var newDiv = document.createElement("div");
+      
+      // Create three input fields and append them to the new div
+      var input1 = document.createElement("input");
+      input1.type = "number";
+      input1.placeholder = "Input 1";
+      input1.addEventListener("input", updateInput3);
+      newDiv.appendChild(input1);
+      
+      var input2 = document.createElement("input");
+      input2.type = "number";
+      input2.placeholder = "Input 2";
+      input2.addEventListener("input", updateInput3);
+      newDiv.appendChild(input2);
+      
+      var input3 = document.createElement("input");
+      input3.type = "number";
+      input3.placeholder = "Input 3";
+
+    //   input3.addEventListener("input", updateTotal);
+
+
+
+      newDiv.appendChild(input3);
+      
+      // Append the new div to the container div
+      var container = document.getElementById("container");
+      container.appendChild(newDiv);
+      
+      // Add the input fields to the inputs array
+      inputs.push(input1);
+      inputs.push(input2);
+      inputs.push(input3);
+      
+      // Update the total box
+      updateTotal();
+    }
+    
+    function updateInput3() {
+      // Get the values of input1 and input2
+      var input1Value = parseInt(event.target.parentElement.children[0].value);
+      var input2Value = parseInt(event.target.parentElement.children[1].value);
+      
+      // Calculate the sum of input1 and input2
+      var sum = input1Value + input2Value;
+      
+      // Update the value of input3
+      event.target.parentElement.children[2].value = sum;
+      
+      // Update the total box
+      updateTotal();
+    }
+
+
+    
+    function updateTotal() {
+  // Update the total box
+  var totalBox = document.getElementById("total");
+  var total = 0;
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].type === "number" && !isNaN(parseInt(inputs[i].value)) && i % 3 === 2) {
+      total += parseInt(inputs[i].value);
+    }
+  }
+  totalBox.innerHTML = "Total: " + total;
+  console.log(total);
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>

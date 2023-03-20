@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="add-button" type="button">+</button>
+<input type="number" min="0" id="totalone" value="0"> -->
+<!-- 
+<script>
+    const addButton = document.getElementById("add-button");
+    const totalOneInput = document.getElementById("totalone");
+
+    addButton.addEventListener("click", function() {
+        const inputBox = document.createElement("input");
+        inputBox.type = "number";
+        inputBox.min = "0";
+        inputBox.value = "0";
+        inputBox.addEventListener("input", updateTotal);
+
+        document.body.appendChild(inputBox);
+    });
+
+    function updateTotal() {
+        let total = 0;
+        const inputs = document.querySelectorAll("input[type='number']");
+
+        inputs.forEach(function(input) {
+            total += parseInt(input.value);
+            console.log(total);
+        });
+
+        totalOneInput.value = total;
+    }
+</script> -->
+<button id="add-button" type="button">+</button>
+<input type="number" min="0" id="totalone" value="0">
+
+<script>
+    const addButton = document.getElementById("add-button");
+    const totalOneInput = document.getElementById("totalone");
+    addButton.addEventListener("click", function() {
+        const inputBox = document.createElement("input");
+        inputBox.type = "number";
+        inputBox.min = "0";
+        inputBox.value = "0";
+        document.body.appendChild(inputBox);
+    });
+
+    function sumInputs() {
+        const inputBoxes = document.getElementsByTagName("input");
+        let sum = 0;
+        for (let i = 0; i < inputBoxes.length; i++) {
+            sum += Number(inputBoxes[i].value);
+        }
+        // console.log(sum);
+        totalOneInput.value = sum;
+    }
+
+    addButton.addEventListener("click", sumInputs);
+</script>
+
+
+</body>
+</html>

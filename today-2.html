@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script>
+      function createDiv() {
+        // Create a new div element
+        var div = document.createElement("div");
+
+        // Create three input fields
+        var input1 = document.createElement("input");
+        var input2 = document.createElement("input");
+        var input3 = document.createElement("input");
+
+        // Create a clear button
+        var clearBtn = document.createElement("button");
+        clearBtn.innerHTML = "Clear";
+        clearBtn.addEventListener("click", function() {
+          div.parentNode.removeChild(div);
+        });
+
+        // Add event listeners to input1 and input2 to update input3 when their values change
+        input1.addEventListener("input", updateInput3);
+        input2.addEventListener("input", updateInput3);
+
+        // Function to update the value of input3 based on the values of input1 and input2
+        function updateInput3() {
+          var value1 = Number(input1.value);
+          var value2 = Number(input2.value);
+          input3.value = value1 + value2;
+        }
+
+        // Append the input fields and clear button to the new div
+        div.appendChild(input1);
+        div.appendChild(input2);
+        div.appendChild(input3);
+        div.appendChild(clearBtn);
+
+        // Add the new div to the document
+        document.body.appendChild(div);
+      }
+
+
+//       function updateTotal() {
+//   // Update the total box
+//   var totalBox = document.getElementById("total");
+//   var total = 0;
+//   for (var i = 0; i < inputs.length; i++) {
+//     if (inputs[i].type === "number" && !isNaN(parseInt(inputs[i].value)) && i % 3 === 2) {
+//       total += parseInt(inputs[i].value);
+//     }
+//   }
+//   totalBox.innerHTML = "Total: " + total;
+// }
+    </script>
+  </head>
+  <body>
+    <button onclick="createDiv()">Click me</button>
+    <div id="total"></div>
+  </body>
+</html>

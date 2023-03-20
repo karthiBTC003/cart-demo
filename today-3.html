@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function createInput() {
+        // Create a new div element
+        var div = document.createElement("div");
+        var divIndex = inputCount;
+      
+        // Create two new input elements and add them to the div
+        for (var i = 0; i < 2; i++) {
+          var input = document.createElement("input");
+          input.type = "number";
+          input.name = "dynamic-input";
+          input.className = "input-row";
+          input.style.marginLeft = "4rem";
+          input.setAttribute("id", `input-${divIndex}`);
+          if (i == 0) {
+            input.classList.add("max");
+            input.setAttribute("min",1);
+          }
+          if (i == 1) {
+            input.classList.add("minmax");
+            input.setAttribute("min",1);
+          }
+          div.appendChild(input);
+        }
+      
+        // Calculate the sum of the first two input elements and add it as a third input element
+        var resultInput = document.createElement("input");
+        resultInput.type = "number";
+        resultInput.readOnly = true;
+        resultInput.classList.add("result");
+        resultInput.value = parseFloat(inputs[0].value) + parseFloat(inputs[1].value);
+        div.appendChild(resultInput);
+      
+        // Add a "Clear" button to the div
+        var clearBtn = document.createElement("button");
+        clearBtn.innerText = "X";
+        clearBtn.onclick = function () {
+          if (confirm("Are you sure you want to clear this input field?")) {
+             // subtract the value from the total before removing the input field
+            div.remove();
+          }
+        };
+        div.appendChild(clearBtn);
+      
+        // Add the div element to the container div
+        var container = document.getElementById("input-container");
+        container.appendChild(div);
+      
+        inputCount++;
+      }
+      </script>
+</body>
+</html>

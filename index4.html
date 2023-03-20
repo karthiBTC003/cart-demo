@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>body{
+    background-color: blueviolet;
+}
+
+.min1{
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    left: 335px;
+    top: 40px;
+}
+
+.max1{
+    left: 135px;
+    top: 40px;
+    
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+.demo1{width: 170px;
+    margin-top: 200px;
+    margin-left: 200px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.demo2{width: 170px;
+    margin-top: 200px;
+    margin-left: 444px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+.demo3 {
+    margin-top: 200px;
+    margin-left: 765px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.demo4{width: 170px;
+    margin-top: 250px;
+    margin-left: 200px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.demo5{width: 170px;
+    margin-top: 250px;
+    margin-left: 444px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+.demo6 {
+    margin-top: 250px;
+    margin-left: 765px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+
+.demo8{   
+
+    width: 170px;
+    margin-top: 306px;
+    margin-left: 201px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.demo9{     margin-top: 305px;
+    margin-left: 444px;
+    height: 27px;
+    width: 169px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    
+   
+}
+.demo10 {
+    width: 170px;
+    margin-top: 306px;
+    margin-left: 766px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+.demo7{
+    margin-top: 396px;
+    margin-left: 770px;
+    height: 27px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+
+.btn{
+    margin-top: 398px;
+    margin-left: 520px;
+    height: 39px;
+    width: 113px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.add{
+    height: 38px;
+    width: 110px;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    left: 198px;
+    top: 119px;
+    font-size: medium;
+}
+.clr-1{
+    position: absolute;
+    z-index: 2;
+    font-size: 16px;
+    left: 914px;
+    top: 208px;
+    width: 26px;
+    height: 25px;
+    border-radius: 50%;}
+
+
+.clr-2{
+    position: absolute;
+    z-index: 2;
+    font-size: 16px;
+    left: 914px;
+    top: 258px;
+    width: 26px;
+    height: 25px;
+    border-radius: 50%;}
+.clr3{
+    position: absolute;
+    z-index: 2;
+    font-size: 16px;
+    left: 914px;
+    top: 313px;
+    width: 26px;
+    height: 25px;
+    border-radius: 50%;}
+
+    .div1clear{
+    position: absolute;
+    left: 1009px;
+    top: 203px;
+    width: 90px;
+    height: 37px;
+    border-radius: 8px;
+}
+.div2clear{
+    position: absolute;
+    left: 1009px;
+    top: 254px;
+    width: 90px;
+    height: 37px;
+    border-radius: 8px;
+}
+
+.div3clear{
+    position: absolute;
+    left: 1009px;
+    top: 308px;
+    width: 90px;
+    height: 37px;
+    border-radius: 8px;
+}
+
+
+</style></style>
+</head>
+<body>
+
+
+  <div style="position: relative;">
+
+        
+    
+    <!--min    onchange="myFunction1()"    onchange="myFunction()" -->
+    <input type="number" onchange="myFun123()"  min="1" max="" placeholder="Enter max-value" placeholder="0"  id="demo-2" class="min1">
+
+
+    <input type="number" onchange="myFun123()"  min="1" placeholder="Enter min-value" placeholder="0" id="demo-1" class="max1">
+    
+    <!-- <button onclick="myFun123()" class="add">Add </button> -->
+
+    <!-- <button class="btn" onclick="calFun()">submit</button> -->
+</div>
+
+  <script>
+
+
+
+
+//box-1
+const x = document.getElementById("demo1");
+const yField = document.getElementById("demo2");
+const q = document.getElementById("demo3");
+
+// box-2
+const x1 = document.getElementById("demo4");
+const y2Field = document.getElementById("demo5");
+const q3 = document.getElementById("demo6");
+
+//box-3
+
+const x3 = document.getElementById("demo8");
+const y3Field = document.getElementById("demo9");
+const q4 = document.getElementById("demo10");
+
+
+const lresult = document.getElementById("demo7");
+
+// const div1=document.getElementById("div1");
+// const div2=document.getElementById("div2").div2.style.display="block";
+// const div3=document.getElementById("div3");
+
+
+function calFun1(){
+
+
+  const y = parseFloat(yField.value);
+  if (y < 0) {
+    alert("Please enter a positive value .");
+    yField.value = "";
+    return;
+  }
+  const z1 = parseFloat(x.value) + y;
+  q.value = z1;
+  calFun4();
+
+
+
+    // const y = parseFloat(yField.value);
+    // const z1 = parseFloat(x.value) + y;
+   
+    // q.value = z1;
+    calFun4()
+}
+
+function clearValues1() {
+    
+  const totalone = parseFloat(q.value);
+  q.value = "";
+  x.value = "";
+  yField.value = "";
+
+ 
+
+  if (q3.value && q4.value) {
+  lresult.value = parseFloat(q3.value) + parseFloat(q4.value);
+} else if (q3.value)  {
+  lresult.value = parseFloat(q3.value)
+}else if (q4.value){
+    lresult.value =  parseFloat(q4.value)
+}
+else{
+    lresult.value="0";
+}
+//   lresult.value = parseFloat(q3.value) + parseFloat(q4.value);
+ 
+}
+
+function clearDiv1(Div1){
+    const div2=document.getElementById("div1");
+    div2.style.display="none";
+
+    q.value = "";
+  x.value = "";
+  yField.value = "";
+    // lresult.value = parseFloat(q3.value) + parseFloat(q4.value);
+
+    if (q3.value && q4.value) {
+  lresult.value = parseFloat(q3.value) + parseFloat(q4.value);
+} else if (q3.value)  {
+  lresult.value = parseFloat(q3.value)
+}else if (q4.value){
+    lresult.value =  parseFloat(q4.value)
+} else{
+    lresult.value="0";
+}
+
+var result12 = confirm("Are you sure you want to do this?");
+  
+  if (result12== true) {
+   return true;
+} else {
+  div2.style.display="block";
+  return false;
+ 
+}
+
+
+
+}
+
+
+function calFun2(){
+    // const y4 = parseFloat(y2Field.value);
+    // const z = parseFloat(x1.value) + y4;
+   
+    // q3.value = z;
+
+    const y4 = parseFloat(y2Field.value);
+  if (y4 < 0) {
+    alert("Please enter a positive value .");
+    y4Field.value = "";
+    return;
+  }
+  const z1 = parseFloat(x1.value) + y4;
+  q3.value = z1;
+  
+    calFun4()
+}
+
+
+
+// clear function -2
+function clearValues2() {
+  q3.value = "";
+  x1.value = "";
+  y2Field.value = "";
+  
+
+  if (q.value && q4.value) {
+  lresult.value = parseFloat(q.value) + parseFloat(q4.value);
+} else if (q.value){
+    lresult.value = parseFloat(q.value)
+} else if (q4.value){
+    lresult.value = parseFloat(q4.value)
+} else{
+    lresult.value="0";
+}
+
+//   lresult.value = parseFloat(q.value) + parseFloat(q4.value);
+//   clearValues9()
+}
+
+function clearDiv2(Div2){
+    const div2=document.getElementById("div2");
+    div2.style.display="block";
+
+
+    q3.value = "";
+  x1.value = "";
+  y2Field.value = "";
+
+  
+  
+ 
+    // lresult.value = parseFloat(q.value) + parseFloat(q4.value);
+    if (q.value && q4.value) {
+  lresult.value = parseFloat(q.value) + parseFloat(q4.value);
+} else if (q.value){
+    lresult.value = parseFloat(q.value)
+} else if (q4.value){
+    lresult.value = parseFloat(q4.value)
+} else{
+    lresult.value="0";
+}
+
+var result12 = confirm("Are you sure you want to do this?");
+const up=document.getElementById("up");
+  if (result12== true) {
+    div2.style.display="none";
+    up.style.top="-30px";
+   return true;
+} else {
+   
+  
+ 
+
+  return false;
+}
+
+
+
+
+}
+
+
+
+
+
+function calFun3(){
+    // const y = parseFloat(y3Field.value);
+    // const z1 = parseFloat(x3.value) + y;
+   
+    // q4.value = z1;
+
+    const y4 = parseFloat(y3Field.value);
+  if (y4 < 0) {
+    alert("Please enter a positive value .");
+    y4Field.value = "";
+    return;
+  }
+  const z1 = parseFloat(x3.value) + y4;
+  q4.value = z1;
+    calFun4()
+}
+
+ 
+function clearValues3() {
+  q4.value = "";
+  x3.value = "";
+  y3Field.value = "";
+ 
+//   lresult.value = parseFloat(q.value) + parseFloat(q3.value);
+
+if (q.value && q3.value) {
+  lresult.value = parseFloat(q.value) + parseFloat(q3.value);
+} else if (q.value) {
+    lresult.value = parseFloat(q.value)
+} else if (q3.value) {
+    lresult.value = parseFloat(q3.value)
+}else{
+    lresult.value = "0";
+}
+}
+
+
+function clearDiv3(Div3){
+    const div2=document.getElementById("div3");
+    div2.style.display="none";
+
+    q4.value = "";
+  x3.value = "";
+  y3Field.value = "";
+    // lresult.value = parseFloat(q.value) + parseFloat(q.value);
+
+    if (q.value && q3.value) {
+  lresult.value = parseFloat(q.value) + parseFloat(q3.value);
+} else if (q.value) {
+    lresult.value = parseFloat(q.value)
+} else if (q3.value) {
+    lresult.value = parseFloat(q3.value)
+}else{
+    lresult.value = "0"; 
+
+}
+
+
+
+var result12 = confirm("Are you sure you want to do this?");
+  
+  if (result12== true) {
+   return true;
+} else {
+  div2.style.display="block";
+  return false;
+ 
+}
+
+}
+// const lresult = document.getElementById("demo7");
+
+
+
+
+
+   
+function calFun4() {
+  const val1 = parseFloat(q.value);
+  const val2 = parseFloat(q3.value);
+  const val3 = parseFloat(q4.value);
+//   const val4 = parseFloat(lresult.value);
+
+  if(isNaN(val1)){
+    q.value="";
+}
+const result1=(isNaN(val1) ? 0:val1);
+ 
+  if(isNaN(val2)){
+    q3.value="";
+    }
+const result2=(isNaN(val2) ? 0:val2);
+
+if(isNaN(val3)){
+    q4.value="";
+    }
+const result3=(isNaN(val3) ? 0:val3);
+
+
+
+ const result = result1 + result2 + result3;
+
+
+
+ function clearValues1() {
+  const totalone = parseFloat(q.value);
+  q.value = "";
+  x.value = "";
+  yField.value = "";
+  const result = parseFloat(lresult) - totalone;
+//   lresult =isNaN(result) ? 0 : result;
+
+
+
+}
+ 
+function clearValues2() {
+  const totalone2 = parseFloat(q3.value);
+  q3.value = "";
+  x1.value = "";
+  y2Field.value = "";
+  const result1 = parseFloat(lresult) - totalone2;
+
+}
+  
+  lresult.value = result;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function myFun123() {
+const y1 =  document.getElementById("demo-1").value;
+const y =document.getElementById("demo-2").value;
+
+// y1.setAttribute("min",1);
+
+//box-1
+
+document.getElementById("demo2").setAttribute("min",y1);
+document.getElementById("demo2").setAttribute("max",y);
+
+// document.getElementById("demo1").setAttribute("min",y1);
+document.getElementById("demo1").setAttribute("max",y);
+
+
+// document.getElementById("demo3").setAttribute("min",y1);
+// document.getElementById("demo3").setAttribute("max",y);
+
+
+//box-2
+
+// document.getElementById("demo4").setAttribute("min",y1);
+document.getElementById("demo4").setAttribute("max",y);
+
+document.getElementById("demo5").setAttribute("min",y1);
+document.getElementById("demo5").setAttribute("max",y);
+
+//box-3
+document.getElementById("demo8").setAttribute("max",y);
+
+document.getElementById("demo9").setAttribute("min",y1);
+document.getElementById("demo9").setAttribute("max",y)
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Create the outermost div element
+var div3 = document.createElement("div");
+div3.setAttribute("style", "position: relative;");
+div3.setAttribute("id", "div3");
+div3.setAttribute("class", "three");
+
+// Create the inner div element
+var innerDiv = document.createElement("div");
+innerDiv.setAttribute("style", "position: relative;");
+innerDiv.setAttribute("id", "up");
+
+// Create the first input element
+var input1 = document.createElement("input");
+input1.setAttribute("type", "number");
+input1.setAttribute("onchange", "calFun3()");
+input1.setAttribute("min", "1");
+input1.setAttribute("placeholder", "product C");
+input1.setAttribute("id", "demo8");
+input1.setAttribute("class", "demo8");
+innerDiv.appendChild(input1);
+
+// Create the second input element
+var input2 = document.createElement("input");
+input2.setAttribute("type", "number");
+input2.setAttribute("onchange", "calFun3()");
+input2.setAttribute("min", "1");
+input2.setAttribute("max", "1");
+input2.setAttribute("placeholder", "quantity-3");
+input2.setAttribute("id", "demo9");
+input2.setAttribute("class", "demo9");
+innerDiv.appendChild(input2);
+
+// Create the third input element
+var input3 = document.createElement("input");
+input3.setAttribute("type", "text");
+input3.setAttribute("minlength", "1");
+input3.setAttribute("placeholder", "Enter value-3");
+input3.setAttribute("id", "demo10");
+input3.setAttribute("class", "demo10");
+input3.setAttribute("readonly", "");
+innerDiv.appendChild(input3);
+
+// Create the clear button
+var clearButton = document.createElement("button");
+clearButton.setAttribute("onclick", "clearValues3()");
+clearButton.setAttribute("class", "clr3");
+clearButton.innerHTML = "x";
+innerDiv.appendChild(clearButton);
+
+// Create the "Clear" button
+var clearDivButton = document.createElement("button");
+clearDivButton.setAttribute("onclick", "clearDiv3('div3')");
+clearDivButton.setAttribute("class", "div3clear");
+clearDivButton.innerHTML = "Clear";
+innerDiv.appendChild(clearDivButton);
+
+// Append the inner div to the outer div
+div3.appendChild(innerDiv);
+
+// Append the outer div to the document body
+document.body.appendChild(div3);
+
+
+
+</script>
+
+</body>
+</html>
